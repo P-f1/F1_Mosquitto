@@ -1,0 +1,12 @@
+version: "3.6"
+
+networks:
+  default:
+    name: f1_edge
+
+services:
+  mosquitto01:
+    container_name: mosquitto01
+    image: eclipse-mosquitto
+    ports:
+      - 0.0.0.0:1883:1883
