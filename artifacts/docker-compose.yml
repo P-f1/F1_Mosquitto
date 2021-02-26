@@ -5,8 +5,13 @@ networks:
     name: f1_edge
 
 services:
-  mosquitto01:
+  air-mosquitto:
     container_name: mosquitto01
     image: eclipse-mosquitto
+#    volumes:
+#      - mosquitto.conf:/mosquitto/config/mosquitto.conf 
+#      - /mosquitto/data
+#      - /mosquitto/log
     ports:
       - 0.0.0.0:1883:1883
+      - 0.0.0.0:9001:9001
